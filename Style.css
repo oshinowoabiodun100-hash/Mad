@@ -1,0 +1,70 @@
+
+        :root {
+            --bg-light: #f0f4f8;
+            --text-light: #1e293b;
+            --bg-dark: #0d1117;
+            --text-dark: #e2e8f0;
+            --primary-green: #059669;
+            --primary-green-light: #10b981;
+            --secondary-glow: rgba(5, 150, 105, 0.5);
+        }
+        .dark {
+            --bg-light: #0d1117;
+            --text-light: #e2e8f0;
+            --bg-dark: #f0f4f8;
+            --text-dark: #1e293b;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .bg-custom-light { background-color: var(--bg-light); }
+        .bg-custom-dark { background-color: var(--bg-dark); }
+        .text-custom-light { color: var(--text-light); }
+        .text-custom-dark { color: var(--text-dark); }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .glassmorphism {
+            background: rgba(13, 17, 23, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-glow {
+            box-shadow: 0 0 150px var(--secondary-glow);
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, var(--primary-green), var(--primary-green-light));
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(5, 150, 105, 0.4);
+        }
+        .tag {
+            transition: all 0.2s ease;
+        }
+        .tag:hover {
+            transform: scale(1.1);
+            background-color: var(--primary-green-light);
+            color: white;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-light);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-green);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-green-light);
+        }
